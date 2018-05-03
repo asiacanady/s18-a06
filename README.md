@@ -1,5 +1,5 @@
 # Assignment 6: Further Exploration of Chicago Crimes
-In this assignment we will continue to explore the Chicago crimes dataset using the more advanced operations we've learned including merging and group aggregation. Put the code for each question in files named `q1.py,...,q5.py`.
+In this assignment we will continue to explore the Chicago crimes dataset using the more advanced operations we've learned including merging and group aggregation. Put the code for each question in files named `q1.py,...,q5.py`. Do not commit the CSV files to your git repository.
 
 1. Load the crime data and parse the Date column. Also load the [community area socioeconomic data](https://data.cityofchicago.org/Health-Human-Services/Census-Data-Selected-socioeconomic-indicators-in-C/kn9c-c2s2) and get rid of the row corresponding to Chicago that is missing a `Community Area Number`.
 
@@ -36,3 +36,4 @@ In this assignment we will continue to explore the Chicago crimes dataset using 
     Hint:
      - The station `DISTRICT` is a text field (because one of them is 'Headquarters') so you'll need to convert the crime `Distrct` to the same.
      - To calculate the distance use the included coordinates. (called `X Coordinates` and `Y Cooridnates` in the crime file; `X COORDINATES`, `Y COORDINATES` in the stations file). Find their distance in feet by taking the Euclidean distance (sqrt of dx squared plus dy squared) and then divide by 5280 to convert to miles.
+     - By default the histogram will have 10 bins. You can increase that using the `bins` argument to `hist()`.
