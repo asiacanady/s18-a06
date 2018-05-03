@@ -34,6 +34,6 @@ In this assignment we will continue to explore the Chicago crimes dataset using 
 6. Load the [police stations data](https://data.cityofchicago.org/Public-Safety/Police-Stations/z8bn-74gv). Join the crime data with the stations on police district. For each crime, calculate the distance to the police station in miles. Then plot a histogram of these distances and save it to `crimes_by_distance.png`.
 
     Hint:
-     - The station `DISTRICT` is a text field (because one of them is 'Headquarters') so you'll need to convert the crime `Distrct` to the same.
+     - The station `DISTRICT` is a text field (because one of them is 'Headquarters') so you'll need to convert the crime `Distrct` to the same and strip the decimals so they match.
      - To calculate the distance use the included coordinates. (called `X Coordinates` and `Y Cooridnates` in the crime file; `X COORDINATES`, `Y COORDINATES` in the stations file). Find their distance in feet by taking the Euclidean distance (sqrt of dx squared plus dy squared) and then divide by 5280 to convert to miles.
      - By default the histogram will have 10 bins. You can increase that using the `bins` argument to `hist()`.
