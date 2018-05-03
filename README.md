@@ -5,9 +5,9 @@ In this assignment we will continue to explore the Chicago crimes dataset using 
 
     Calculate the number of crimes per community area. Merge this with the socioeconomic data to plot a scatter with per capita income on the x axis and crime count on the y axis. Save the plot as `crimes_by_income.png`.
 
-  Hint:
-   - Turn the crime counts into a dataframe using `reset_index()` as discussed lecture. Either name the community area nunber column `Community Area Number` to match the corresponding column in the socioeconomic data, or use separate `left_on` and `right_on` argument to `merge()`.
-    - To make a scatter plot, call `plot()` on the DataFrame with an argument `kind='scatter'` and additional arguments `x` and `y` specifying the names of the columns to use for `x` and `y` data.
+    Hint:
+     - Turn the crime counts into a dataframe using `reset_index()` as discussed lecture. Either name the community area nunber column `Community Area Number` to match the corresponding column in the socioeconomic data, or use separate `left_on` and `right_on` argument to `merge()`.
+     - To make a scatter plot, call `plot()` on the DataFrame with an argument `kind='scatter'` and additional arguments `x` and `y` specifying the names of the columns to use for `x` and `y` data.
     
 2. Repeat #1 for homicide counts and save the plot as `homocides_by_income.png`.
 
