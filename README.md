@@ -31,7 +31,7 @@ In this assignment we will continue to explore the Chicago crimes dataset using 
 
 5. Merge the dataset you created in #4 with a count of homicides by community area to calculate the homicide rate per 100,000 capita in each community area. Merge this with the socioeconomic data, which contains the name of each community area, to find the community area with the highest crime *rate*. Include the name of this community area and its homicide rate in a comment at the end of `q5.py`.
 
-6. Load the [police stations data](https://data.cityofchicago.org/Public-Safety/Police-Stations/z8bn-74gv). Join the crime data with the stations on police district. For each crime, calculate the distance to the police station in miles. Then plot a histogram of these distances.
+6. Load the [police stations data](https://data.cityofchicago.org/Public-Safety/Police-Stations/z8bn-74gv). Join the crime data with the stations on police district. For each crime, calculate the distance to the police station in miles. Then plot a histogram of these distances and save it to `crimes_by_distance.png`.
 
     Hint:
      - The station `DISTRICT` is a text field (because one of them is 'Headquarters') so you'll need to convert the crime `Distrct` to the same.
