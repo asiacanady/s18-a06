@@ -1,5 +1,5 @@
 # Assignment 6: Further Exploration of Chicago Crimes
-In this assignment we will continue to explore the Chicago crimes dataset using the more advanced operations we've learned including merging and group aggregation. Put the code for each question in files named `q1.py,...,q5.py`. Do not commit the CSV files to your git repository.
+In this assignment we will continue to explore the Chicago crimes dataset using the more advanced operations we've learned including merging and group aggregation. Put the code for each question in files named `q1.py,...,q6.py`. Do not commit the CSV files to your git repository.
 
 1. Load the 2017 crime data from assignment 5. Also load the [community area socioeconomic data](https://data.cityofchicago.org/Health-Human-Services/Census-Data-Selected-socioeconomic-indicators-in-C/kn9c-c2s2) and get rid of the row corresponding to the whole city of Chicago (it's missing a `Community Area Number`).
 
