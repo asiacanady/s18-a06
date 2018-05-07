@@ -13,7 +13,7 @@ In this assignment we will continue to explore the Chicago crimes dataset using 
 
     Hint: The homicide counts will be missing rows for community areas that had no homicides. The default, inner, merge between homocide counts and socioeconomic data will thus be missing these areas. To get the right answer, you will need to select a different merge type using the `how` argument and then fill in the missing homocide counts with zeros.
   
-3. Plot the proportion of crimes that are domestic by hour of the day. Save this as `prop_domestic_by_hour.png`.
+3. Create a plot where the x-axis is the hour of the day and the y-axis is the proportion of crimes occuring that hour that are domestic. Save this as `prop_domestic_by_hour.png`.
 
     Hint: You can extract the hour of a Timestamp using the `hour` attribute (similar to `month` and `dayofweek` shown in lecture). Then `groupby` the hour and aggregate the `Domestic` column.
 
@@ -27,9 +27,10 @@ In this assignment we will continue to explore the Chicago crimes dataset using 
     - To merge the datasets you need to find the census tract for each block in the population data. By definition this is the first 6 digits of the block number. 
     - However, the data portal has a bug where it dropped the leading digit if it was a zero. Thus you need to convert the census blocks to strings, and then pad them to length 10 with a leading zero using the `.str.zfill()` function.
     - The census tracts in the `tract_community.csv` mapping are full GeoIDs. The first few numbers represent Cook County. To match he tract in the popultaion data you can ignore these digits and take only the last 6 digits by converting them to strings and indexing.
+        - For example, you will want to pair `Census Tract` 17031031000 in tract_community.csv with `CENSUS BLOCK` 310003002 in `Population_by_2010_Census_Block.csv`.
     - Finally you can merge the two datasets and group by Community area and aggregate the populations.
 
-5. Merge the dataset you created in #4 with a count of homicides by community area to calculate the homicide rate per 100,000 capita in each community area. Merge this with the socioeconomic data, which contains the name of each community area, to find the community area with the highest crime *rate*. Include the name of this community area and its homicide rate in a comment at the end of `q5.py`.
+5. Merge the dataset you created in #4 with a count of homicides by community area to calculate the homicide rate per 100,000 capita in each community area. Merge this with the socioeconomic data, which contains the name of each community area, to find the community area with the highest homicide *rate*. Include the name of this community area and its homicide rate in a comment at the end of `q5.py`.
 
 6. Load the [police stations data](https://data.cityofchicago.org/Public-Safety/Police-Stations/z8bn-74gv). Join the crime data with the stations on police district. For each crime, calculate the distance to the police station in miles. Then plot a histogram of these distances and save it to `crimes_by_distance.png`.
 
