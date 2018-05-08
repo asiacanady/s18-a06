@@ -24,7 +24,7 @@ In this assignment we will continue to explore the Chicago crimes dataset using 
     Merge these datasets on census tract to calculate the population of each community area. Put the result in a dataframe with two columns: `Community Area` and `Population`. Write the result to a CSV file called `community_populations.csv` using the `DataFrame.to_csv()` function. (You may want to pass `index=False` so that it doesn't write the index column to the file.)
     
     Hint: 
-    - To merge the datasets you need to find the census tract for each block in the population data. By definition this is the first 6 digits of the block number. 
+    - To merge the datasets you need to find the census tract for each block in the population data. By definition this is the first 6 digits of the block number. (See the U.S. Census page on [geoidentifiers](https://www.census.gov/geo/reference/geoidentifiers.html), especially the section titled "GEOID Structure for Geographic Areas).
     - However, the data portal has a bug where it dropped the leading digit if it was a zero. Thus you need to convert the census blocks to strings, and then pad them to length 10 with a leading zero using the `.str.zfill()` function.
     - The census tracts in the `tract_community.csv` mapping are full GeoIDs. The first few numbers represent Cook County. To match he tract in the popultaion data you can ignore these digits and take only the last 6 digits by converting them to strings and indexing.
         - For example, you will want to pair `Census Tract` 17031031000 in tract_community.csv with `CENSUS BLOCK` 310003002 in `Population_by_2010_Census_Block.csv`.
